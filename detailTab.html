@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <!-- animation library IMR -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Job Ninja!-Detail Tab</title>
+</head>
+<body>
+    <div class="container animated bounceInUp">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid p-3 mt-3 navtitle" style="border-radius: 10px; width: 100%">
+                    <div class="container mx-auto" style="padding-left:32%">
+                        <p class="display-3 float-left navText animated bounce delay-1Second">Job Ninja!</p>
+                        <img class="logoStyle animated zoomInUp delay-1Second" src="assets/images/AlexNinja2.jpg"  alt="alex as a ninja">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- div below contains two Columns each called col-md-6 IMR-->
+        <div class="row">
+            <!-- first column  IMR-->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-Green" >
+                                <strong>Company / Job Title:</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="container text-center">
+                                    <p id="company-jobTitle" class=" h4"></p>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-Green" >
+                                    <strong>Job info:</strong> 
+                            </div>
+                            <div class="card-body" id="jobInfo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+            <!-- second column IMR-->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id ='map'></div>
+
+                    </div>
+                </div>
+                <!-- second row of second column IMR-->
+                <div class="row my-3">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div  class="card-header bg-Green"  >
+                                <div class="loader float-right ml-3" id ='houseLoad2' style="margin-top:10px;"></div>
+                                <div style='padding:10px 0px; float: left'><strong >Season Weather Averages:</strong></div>
+                                <a href="https://developer.worldweatheronline.com/" target="_blank"><img alt="Weather API" src="https://cdn.worldweatheronline.net/staticv3/images/logo_small.png" style="border-style:solid; border-width:0px; height:43px; width:100px; float: right; margin-right:5px;" /></a>
+                            </div>
+                            <div id="weatherStripMobile pt-0 pb-0" class="card-body">
+                                  <div class="row" id='weather'>
+
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- thrid row on second column for housing info IMR-->
+                    <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header bg-Green" >
+                                        <div style='float:left;padding: 15px 0px'><strong>Housing in the area:</strong></div>
+                                        <div class="loader float-right ml-3" id ='houseLoad' style="margin-top:10px;"></div>
+                                        <a href='https://www.zillow.com/' target='_blank' style='float: right; padding: 3px 3px'><img src='https://www.zillowstatic.com/vstatic/b20c067/static/logos/Zillowlogo_200x50.gif'></a>
+                                    </div>
+                                    <div id="housingInfo" class="card-body">
+                                        <div class="row">
+                                            <div id="housingLocation" class="col-md-12"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end of second column -->
+                </div>
+        </div>
+            <div class="row my-3">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-Green " style='padding-top:0px; padding-bottom:0px'>
+                            <div class="loader float-right ml-3" id ='houseLoad3' style="margin-top:25px;"></div>
+                            <a href='https://www.yelp.com/' target='_blank' style='float: right'><img src='assets/images/Yelp/Logo.png' width='120 px'></a>
+                            <div style='float:left; padding: 30px 0px;'><strong>Addition Info: Yelp Reviews</strong> </div>
+                        </div>
+                        <div class="card-body" id='restaurants'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+    
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZn90iyzUTnVjifVYvQh7uWUczvW-UsMo"></script>
+    <script type='text/javascript' src='assets/javascript/details.js'></script>
+
+
+</body>

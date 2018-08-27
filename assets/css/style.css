@@ -1,0 +1,118 @@
+
+/* Google Maps API */
+#map {
+    width: 100%;
+    height: 300px;
+  }
+  
+  #weather{
+    background-image: url(../images/bgWeather2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: cover;
+    height: 75px;
+  }
+  .weatherStrip{
+    opacity: .7;
+    background-color: azure;
+  }
+  
+  body{
+    background-image: url(../images/bamboo\ main\ background\ 2.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-position-y: top;
+  }
+  .logoStyle{
+    width:150px;
+  }
+  .navText{
+    font-weight:bold;
+    text-shadow: 2px 2px 5px black;
+    color: rgb(101, 161, 10);
+    position: relative; 
+    left: -10%;
+  }
+.navtitle{
+  background-image: url(../images/jumbotron2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+.form-group{
+  font-size: 150%
+}
+
+.loader {
+  border: 4px solid darkmagenta;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.foodImage{
+  width: 600px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* changes mouse to pointer to emphasis link and functionality */
+#jobList:hover{
+  cursor: pointer;
+}
+#housingInfo:hover{
+  cursor: pointer;
+}
+.delay-1Second{
+  -webkit-animation-delay: 1s;
+}
+.delay-1AndHalfSeconds{
+  -webkit-animation-delay: 1.5s;
+}
+.bg-Green{
+  background-color: rgb(170, 214, 48);
+}
+/* 411 includes all iphones and pixels  */
+@media only screen and (max-width: 411px){
+  .navText{
+    font-size: 36px;
+    color: black !important;
+    
+  }
+  .logoStyle{
+    width: 80px;
+  }
+  .toBeHiddenMobile{
+    display: none;
+  } 
+  .foodImage{
+    width: 300px;
+    height:300px;
+  }
+  #weatherStripMobile{
+    height: 200px;
+  }
+  #weather{
+    background-image: url(../images/bgWeather2.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%
+  }
+  .weatherStrip{
+    opacity: .5;
+  }
+}
